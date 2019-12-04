@@ -1,6 +1,15 @@
 <?php
 $numberOne = 10;
 $numberTwo = 12;
+function compare($numberOne, $numberTwo){
+  if ($numberOne > $numberTwo) {
+    return 'Le premier nombre est plus grand';
+  } elseif ($numberOne < $numberTwo) {
+    return 'Le premier nombre est plus petit';
+  } else {
+    return 'Les deux nombres sont identiques';
+  }
+};
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -11,15 +20,6 @@ $numberTwo = 12;
   <body>
     <p>
       <?php
-        function compare($numberOne, $numberTwo){
-          if ($numberOne > $numberTwo) {
-          return 'Le premier nombre est plus grand';
-          } elseif ($numberOne < $numberTwo) {
-          return 'Le premier nombre est plus petit';
-          } else {
-          return 'Les deux nombres sont identiques';
-          }
-        };
         echo compare($numberOne, $numberTwo);
       ?>
     </p>
