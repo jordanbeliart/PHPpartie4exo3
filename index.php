@@ -1,14 +1,13 @@
 <?php
-$numberOne = 10;
-$numberTwo = 12;
 function compare($numberOne, $numberTwo){
   if ($numberOne > $numberTwo) {
-    return 'Le premier nombre est plus grand';
+    $result = 'Le premier nombre est plus grand';
   } elseif ($numberOne < $numberTwo) {
-    return 'Le premier nombre est plus petit';
+    $result = 'Le premier nombre est plus petit';
   } else {
-    return 'Les deux nombres sont identiques';
+    $result = 'Les deux nombres sont identiques';
   }
+  return $result;
 };
 ?>
 <!DOCTYPE html>
@@ -19,9 +18,7 @@ function compare($numberOne, $numberTwo){
   </head>
   <body>
     <p>
-      <?php
-        echo compare($numberOne, $numberTwo);
-      ?>
+      <?php echo compare(10, 10); ?>
     </p>
   </body>
 </html>
